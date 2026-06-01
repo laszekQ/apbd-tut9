@@ -1,4 +1,5 @@
 using apbd_tut_9.Data;
+using apbd_tut_9.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<UniversityTasksDbContext>(options =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+builder.Services.AddScoped<ICoursesService, CoursesService>();
 
 var app = builder.Build();
 
