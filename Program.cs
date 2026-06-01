@@ -13,6 +13,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICoursesService, CoursesService>();
 builder.Services.AddScoped<IStudentsService, StudentsService>();
+builder.Services.AddScoped<ISubmissionsService, SubmissionsService>();
 
 var app = builder.Build();
 
