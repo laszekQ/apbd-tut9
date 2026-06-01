@@ -12,6 +12,7 @@ builder.Services.AddDbContext<UniversityTasksDbContext>(options =>
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICoursesService, CoursesService>();
+builder.Services.AddScoped<IStudentsService, StudentsService>();
 
 var app = builder.Build();
 
